@@ -401,6 +401,7 @@ function mpd_get_images_from_the_content($post_id){
 
     //Collect the sourse content
     $html   = get_post_field( 'post_content', $post_id);
+    if ( ! $html ) return;
     $doc    = new DOMDocument();
 
     @$doc->loadHTML($html);
